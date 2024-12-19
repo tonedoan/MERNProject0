@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 const port = process.env.PORT || 5001;
+const path = require('path'); // Use path for robust code to work on multiple OS.
 app.use(cors());
 app.use(express.json());
 
@@ -18,7 +19,7 @@ connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
 
-app.use(express.static(`${__dirname}/client/build`));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 app.get("/health", (req, res) => {
   res.send({
