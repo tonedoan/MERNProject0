@@ -19,7 +19,7 @@ connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
 
-app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(express.static(path.join(__dirname, '../client/build'))); // path is used here to find directory and proper pathing
 
 app.get("/health", (req, res) => {
   res.send({
