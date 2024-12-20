@@ -1,0 +1,22 @@
+/* style.css */
+.navbar-custom {
+  display: flex;
+  gap: 10px; /* Add space between buttons */
+  justify-content: center; /* Center align the buttons */
+  align-items: center; /* Vertically center the buttons */
+  padding: 20px; /* Optional: add padding around the container */
+  flex-wrap: wrap; /* Optional: Wrap buttons if space runs out */
+  }
+  
+  .navbar-custom .nav-link {
+    color: black !important; /* Ensure links are white */
+  }
+  
+  .navbar-custom .nav-link:hover {
+    color: #c8e6c9 !important; /* Change link color on hover */
+  }
+  
+  .navbar-custom .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
